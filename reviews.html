@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test nano Couille</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
+	<script>
+	  console.log(‘LIB :’, Vue);
+	  window.Vue = Vue;
+	  setTimeout(function() {
+	    if (window.EMRPixel) return console.info("EMR: Pixel already loaded");
+	    var s = document.createElement("script");
+	    s.defer = true;
+	    s.src = "https://cdn2.revw.me/js/pixel.js?t=" + 864e5 * Math.ceil(new Date() / 864e5);
+	    s.charset = "utf-8";
+	    s.onload = function() {
+	      EMRPixel.init("avis.nano.fr", 5);
+	    };
+	    var ref = document.getElementsByTagName("script")[0];
+	    ref.parentNode.insertBefore(s, ref);
+	  }, 500);
+	</script>
+
+
+  </head>
+  <body>
+    <!-- Review Pixel --> <script type="text/javascript"> !function(){var e,t=document;e=function(){if(window.EMRPixel)return console.info("EMR: Pixel already loaded");var e=t.createElement("script");e.defer=!0,e.src="https://cdn2.revw.me/js/pixel.js?t="+864e5*Math.ceil(new Date/864e5);var n=t.getElementsByTagName("script")[0];n.charset="utf-8",n.parentNode.insertBefore(e,n),e.onload=function(){EMRPixel.init("avis.nano.fr",5)}},"interactive"===t.readyState||"complete"===t.readyState?e():t.addEventListener("DOMContentLoaded",e())}(); </script><emr-simple-grid widget-id="93a01426-5b47-4545-85ee-2f37fbe660a3"></emr-simple-grid> <!-- Review Pixel End -->
+  </body>
+</html>
